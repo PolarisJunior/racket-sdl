@@ -846,9 +846,9 @@
 ;extern DECLSPEC int SDLCALL SDL_GetRenderDriverInfo(int index,SDL_RendererInfo * info);
 (define-sdl SDL_GetRenderDriverInfo (_fun _int _SDL_RendererInfo-pointer -> _int))
 ;extern DECLSPEC int SDLCALL SDL_CreateWindowAndRenderer( int width, int height, Uint32 window_flags, SDL_Window **window, SDL_Renderer **renderer);
-(define-sdl SDL_CreateWindowAndRenderer (_fun _int _int _uint32 _pointer _pointer -> _int))
+(define-sdl SDL_CreateWindowAndRenderer (_fun _int _int _SDL_RendererFlags _pointer _pointer -> _int))
 ;extern DECLSPEC SDL_Renderer * SDLCALL SDL_CreateRenderer(SDL_Window * window, int index, Uint32 flags);
-(define-sdl SDL_CreateRenderer (_fun _SDL_Window _int _uint32 -> _SDL_Renderer))
+(define-sdl SDL_CreateRenderer (_fun _SDL_Window _int _SDL_RendererFlags -> _SDL_Renderer))
 ;extern DECLSPEC SDL_Renderer * SDLCALL SDL_CreateSoftwareRenderer(SDL_Surface * surface);
 (define-sdl SDL_CreateSoftwareRenderer (_fun _SDL_Surface-pointer -> _SDL_Renderer))
 ;extern DECLSPEC SDL_Renderer * SDLCALL SDL_GetRenderer(SDL_Window * window);
@@ -858,7 +858,7 @@
 ;extern DECLSPEC int SDLCALL SDL_GetRendererOutputSize(SDL_Renderer * renderer, int *w, int *h);
 (define-sdl SDL_GetRendererOutputSize (_fun _SDL_Renderer _int* _int* -> _int))
 ;extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTexture(SDL_Renderer * renderer, Uint32 format, int access, int w, int h);
-(define-sdl SDL_CreateTexture (_fun _SDL_Renderer _uint32 _int _int _int -> _SDL_Texture))
+(define-sdl SDL_CreateTexture (_fun _SDL_Renderer _SDL_TextureAccess _int _int _int -> _SDL_Texture))
 ;extern DECLSPEC SDL_Texture * SDLCALL SDL_CreateTextureFromSurface(SDL_Renderer * renderer, SDL_Surface * surface);
 (define-sdl SDL_CreateTextureFromSurface (_fun _SDL_Renderer _SDL_Surface-pointer -> _SDL_Texture ))
 ;extern DECLSPEC int SDLCALL SDL_QueryTexture(SDL_Texture * texture, Uint32 * format, int *access, int *w, int *h);

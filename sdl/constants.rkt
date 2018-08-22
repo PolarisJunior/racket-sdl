@@ -968,7 +968,7 @@
 ; SDL_render.h
 
 (define _SDL_RendererFlags
-  (_enum
+  (_bitmask
    '(SDL_RENDERER_SOFTWARE = #x00000001
      SDL_RENDERER_ACCELERATED = #x00000002
      SDL_RENDERER_PRESENTVSYNC = #x00000004
