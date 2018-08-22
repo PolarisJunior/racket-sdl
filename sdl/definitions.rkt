@@ -218,7 +218,7 @@
 ;extern DECLSPEC Uint32 SDLCALL SDL_GetWindowPixelFormat(SDL_Window * window);
 (define-sdl SDL_GetWindowPixelFormat (_fun _SDL_Window -> _uint32))
 ;extern DECLSPEC SDL_Window * SDLCALL SDL_CreateWindow(const char *title, int x, int y, int w, int h, Uint32 flags);
-(define-sdl SDL_CreateWindow (_fun _string _int _int _int _int _uint32 -> _SDL_Window))
+(define-sdl SDL_CreateWindow (_fun _string _int _int _int _int _SDL_WindowFlags -> _SDL_Window))
 ;extern DECLSPEC SDL_Window * SDLCALL SDL_CreateWindowFrom(const void *data);
 (define-sdl SDL_CreateWindowFrom (_fun _pointer -> _SDL_Window))
 ;extern DECLSPEC Uint32 SDLCALL SDL_GetWindowID(SDL_Window * window);

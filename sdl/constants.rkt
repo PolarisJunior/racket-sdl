@@ -145,7 +145,7 @@
  
 
 (define _SDL_WindowFlags
-  (_enum
+  (_bitmask
    `(SDL_WINDOW_FULLSCREEN = #x00000001;        /**< fullscreen window */
     SDL_WINDOW_OPENGL = #x00000002     ;        /**< window usable with OpenGL context */
     SDL_WINDOW_SHOWN = #x00000004      ;        /**< window is visible */
