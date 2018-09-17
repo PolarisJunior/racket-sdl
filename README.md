@@ -1,4 +1,4 @@
-racket-sdl
+simple-racket-sdl
 ==========
 
 SDL2 Bindings for Racket
